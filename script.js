@@ -1,49 +1,34 @@
-// --- FUNÇÃO 1: SCROLL SUAVE PARA LINKS INTERNOS ---
+// Navegação por âncoras: o CSS cuida da rolagem suave e do deslocamento do cabeçalho.
+const backToTopButton = document.getElementById('backToTopBtn');
+const yearSpan = document.getElementById('ano-atual');
 
-// Seleciona todos os links do menu que começam com '#'
-document.querySelectorAll('header a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        // Previne o comportamento padrão de pular para a âncora
-        e.preventDefault();
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-        // Pega o destino do link (ex: '#projetos') e encontra a seção correspondente
-        const target = document.querySelector(this.getAttribute('href'));
-
-        // Rola a página suavemente até o topo da seção
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-
-// --- FUNÇÃO 2: BOTÃO "VOLTAR AO TOPO" ---
-
-// Pega o botão pelo seu ID
-const backToTopButton = document.getElementById("backToTopBtn");
-
-// Adiciona um "ouvinte" que verifica a posição da rolagem da página
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    // Se o usuário rolou mais de 100 pixels para baixo da página
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        // Mostra o botão
-        backToTopButton.style.display = "block";
-    } else {
-        // Esconde o botão
-        backToTopButton.style.display = "none";
-    }
+function updateBackToTop() {
+    if (!backToTopButton) return;
+    backToTopButton.style.display = window.scrollY > 320 ? 'block' : 'none';
 }
 
-// Quando o botão é clicado, rola a página de volta para o topo suavemente
-backToTopButton.addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+window.addEventListener('scroll', updateBackToTop, { passive: true });
+updateBackToTop();
+
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     });
-});
+}
+
+// Destaca o item de menu correspondente à seção em exibição.
+if ('IntersectionObserver' in window) {
+    const navLinks = [...document.querySelectorAll('.nav-list a[href^="#"]')];
+    const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + visible.target.id) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+    }, { rootMargin: '-15% 0px -55% 0px', threshold: [0, .1, .3] });
+    sections.forEach(section => observer.observe(section));
+}

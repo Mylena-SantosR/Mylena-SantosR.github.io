@@ -1,95 +1,222 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mylena dos Santos Rocha - Portfólio</title>
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="description" content="Portfólio profissional de Mylena dos Santos Rocha: Administração, planejamento, processos, automação, análise de dados e tecnologia.">
+    <title>Mylena dos Santos Rocha | Planejamento, Processos e Tecnologia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-    <button id="backToTopBtn" title="Voltar ao topo">↑</button>
-
-    <header>
-        <div class="container">
-            <h1>Mylena dos Santos Rocha</h1>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre Mim</a></li>
-                    <li><a href="#tecnologias">Tecnologias</a></li>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="#inicio" aria-label="Mylena dos Santos Rocha, voltar ao início">Mylena dos Santos Rocha<span class="brand-dot">.</span></a>
+            <nav aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
+                    <li><a href="#competencias">Competências</a></li>
                     <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section class="apresentacao">
-            <img class="foto-perfil" src="imagens/Avatar_Mylena.png" alt="Avatar da Mylena">
-            <div class="apresentacao-texto">
-                <h2>Olá, eu sou a Mylena! 👋</h2>
-                <p>Estudante de Sistemas de Informação em transição de carreira para a área de tecnologia, com foco em análise de dados, automação, testes e qualidade.</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/mylena-dos-santos-rocha" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/Mylena-SantosR" target="_blank">GitHub</a>
+    <main id="conteudo">
+        <section id="inicio" class="hero">
+            <div class="container hero-layout">
+                <div class="avatar-frame">
+                    <img class="foto-perfil" src="imagens/Avatar_Mylena.png" alt="Ilustração do perfil de Mylena" width="188" height="188">
+                </div>
+                <div class="hero-copy">
+                    <p class="eyebrow">PORTFÓLIO PROFISSIONAL</p>
+                    <h1>Olá, eu sou a Mylena!</h1>
+                    <p class="hero-subtitle">Planejamento, processos e tecnologia</p>
+                    <p class="hero-description">Sou graduada em Administração e concluinte de Sistemas de Informação. Combino experiência em planejamento e gestão com automação, análise de dados e desenvolvimento de soluções tecnológicas.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projetos">Conheça meus projetos</a>
+                        <a class="button button-secondary" href="#contato">Entre em contato</a>
+                    </div>
+                    <div class="hero-social" aria-label="Perfis profissionais">
+                        <a href="https://www.linkedin.com/in/mylena-dos-santos-rocha" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/Mylena-SantosR" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>
-                Olá! Tenho 25 anos e estou no 6º semestre de Sistemas de Informação e sou formada em administração. Minha jornada profissional começou na área administrativa, onde, por mais de 5 anos, atuei com planejamento, análise de dados e otimização de processos. Foi nesse contato diário com relatórios, planilhas e sistemas como o Totvs Protheus que descobri minha paixão por transformar dados brutos em informações claras e estratégicas.
-            </p>
-            <p>
-                Hoje, estou em um processo de transição de carreira, mergulhando de cabeça no universo da tecnologia. Estou focada em aprofundar meus conhecimentos em Python para análise de dados, SQL para bancos de dados e ferramentas de visualização. Meu interesse se estende também à área de testes e qualidade de software, onde venho explorando automação com Selenium para complementar minha formação.
-            </p>
-        </section>
-
-        <section id="tecnologias">
-            <h2>Tecnologias e Ferramentas</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-card">Python</div>
-                <div class="tech-card">SQL</div>
-                <div class="tech-card">Power BI</div>
-                <div class="tech-card">Testes de Software (QA)</div>
-                <div class="tech-card">Selenium</div>
-                <div class="tech-card">HTML & CSS</div>
-                <div class="tech-card">Git & GitHub</div>
-                <div class="tech-card">Excel (Avançado)</div>
-                <div class="tech-card">Totvs Protheus</div>
+        <section id="sobre" class="section about-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">TRAJETÓRIA</p>
+                    <h2>Sobre mim</h2>
+                    <p class="section-intro">Uma trajetória que conecta processos, pessoas, dados e tecnologia.</p>
+                </div>
+                <div class="about-layout">
+                    <div class="about-text">
+                        <p>Sou graduada em <strong>Administração</strong> e concluinte de <strong>Sistemas de Informação</strong>, com mais de sete anos de atuação profissional, principalmente em planejamento, processos administrativos, análise de informações e melhoria contínua.</p>
+                        <p>No <strong>Espro</strong>, construí minha trajetória desde funções administrativas até Analista de Planejamento Educacional Jr. Atuei com cronogramas, indicadores, relatórios gerenciais e automação de rotinas com <strong>Google Apps Script e JavaScript</strong>, além de participar de testes e melhorias em sistemas.</p>
+                        <p>Durante o estágio supervisionado em TI no <strong>LABXSS</strong>, ampliei minha experiência em projetos envolvendo <strong>Python, Selenium, Pandas, Linux, Docker, Git/GitHub e modelagem de dados</strong>, contribuindo para automação, tratamento de informações e manutenção de aplicações.</p>
+                        <p>Gosto de compreender necessidades, organizar processos e criar soluções práticas. Estou aberta a oportunidades em <strong>planejamento, administração, processos, dados, automação e tecnologia</strong>.</p>
+                    </div>
+                    <aside class="about-aside" aria-label="Formação e áreas de atuação">
+                        <div class="info-card">
+                            <span class="info-label">Formação</span>
+                            <strong>Administração</strong>
+                            <span>UNIDESC · Concluída em 2022</span>
+                        </div>
+                        <div class="info-card">
+                            <span class="info-label">Formação</span>
+                            <strong>Sistemas de Informação</strong>
+                            <span>Universidade Cruzeiro do Sul · Conclusão prevista em 2026</span>
+                        </div>
+                        <div class="info-card accent-card">
+                            <span class="info-label">Áreas de interesse</span>
+                            <strong>Processos + Dados + Tecnologia</strong>
+                            <span>Oportunidades em Goiás, Distrito Federal e remotas.</span>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </section>
 
-        <section id="projetos">
-            <h2>Projetos</h2>
-            <div class="projetos-grid">
-    <div class="projeto-card">
-        <h3>Análise de Doenças Cardíacas</h3>
-        <p>Análise exploratória de dados (EDA) com Python, Pandas e Matplotlib para identificar padrões em um dataset de pacientes. O projeto foi versionado e documentado no GitHub.</p>
-        <a href="https://github.com/Mylena-SantosR/projeto_1_analise-doenca-cardiaca" target="_blank">Ver no GitHub</a>
-    </div>
+        <section id="experiencia" class="section experience-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">VIVÊNCIA PROFISSIONAL</p>
+                    <h2>Experiência</h2>
+                    <p class="section-intro">Experiências que reúnem visão de negócios e conhecimentos técnicos.</p>
+                </div>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <div class="experience-topline">
+                            <span class="experience-period">2021 – 2026</span>
+                            <span class="experience-type">Planejamento e automação</span>
+                        </div>
+                        <h3>Espro</h3>
+                        <p class="role">Analista de Planejamento Educacional Jr. · 2025–2026<br>Assistente de Planejamento Educacional · 2021–2025</p>
+                        <p>Planejamento de calendários e rotinas, relatórios e indicadores gerenciais, organização de processos e apoio à tomada de decisão. Na função de Analista, desenvolvimento de automações com Google Apps Script e JavaScript e participação em testes e melhorias de sistemas.</p>
+                        <div class="tag-list" aria-label="Competências aplicadas">
+                            <span>Planejamento</span><span>Google Apps Script</span><span>JavaScript</span><span>Indicadores</span>
+                        </div>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-topline">
+                            <span class="experience-period">2024 – 2026</span>
+                            <span class="experience-type">Tecnologia e dados</span>
+                        </div>
+                        <h3>LABXSS</h3>
+                        <p class="role">Estagiária em Tecnologia da Informação<br>Felipe Ferré Tecnologia da Informação em Saúde ME</p>
+                        <p>Atuação colaborativa em automação e processamento de dados públicos com Python, Selenium e Pandas, manutenção e testes de aplicações web, modelagem de dados, ambientes Linux e documentação técnica.</p>
+                        <div class="tag-list" aria-label="Competências aplicadas">
+                            <span>Python</span><span>Pandas</span><span>Docker</span><span>Linux</span>
+                        </div>
+                    </article>
+                    <article class="experience-card">
+                        <div class="experience-topline">
+                            <span class="experience-period">2017 – 2021</span>
+                            <span class="experience-type">Administração e operações</span>
+                        </div>
+                        <h3>Espro</h3>
+                        <p class="role">Assistente Administrativo · 2019–2021<br>Jovem Aprendiz — Área Administrativa · 2017–2019</p>
+                        <p>Acompanhamento de contratos, fornecedores, compras, patrimônio, manutenção e serviços de Facilities, além de organização documental, controles administrativos e atendimento.</p>
+                        <div class="tag-list" aria-label="Competências aplicadas">
+                            <span>Facilities</span><span>Contratos</span><span>Fornecedores</span><span>Processos</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <div class="projeto-card">
-        <h3>API de Tarefas com Frontend</h3>
-        <p>Projeto full-stack com API RESTful em Python/Flask para gerenciar uma lista de tarefas e um frontend em HTML/CSS/JS para interagir com a API.</p>
-        <a href="https://github.com/Mylena-SantosR/projeto_3_api_flask_tarefas" target="_blank">Ver no GitHub</a>
-    </div>
+        <section id="competencias" class="section skills-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">CONHECIMENTOS</p>
+                    <h2>Competências e ferramentas</h2>
+                    <p class="section-intro">Conhecimentos desenvolvidos no trabalho, no estágio e em projetos acadêmicos e pessoais.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Gestão e processos</h3>
+                        <div class="tag-list"><span>Planejamento</span><span>Gestão de processos</span><span>Indicadores</span><span>Relatórios</span><span>Facilities</span><span>Excel</span><span>TOTVS Protheus</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Programação e automação</h3>
+                        <div class="tag-list"><span>Python</span><span>JavaScript</span><span>Google Apps Script</span><span>Flask</span><span>Selenium</span><span>Pytest</span><span>HTML e CSS</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Análise e organização de dados</h3>
+                        <div class="tag-list"><span>SQL</span><span>PostgreSQL</span><span>Pandas</span><span>Power BI</span><span>Modelagem de dados</span><span>Visualização de dados</span></div>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Sistemas e infraestrutura</h3>
+                        <div class="tag-list"><span>Linux</span><span>Docker</span><span>Docker Compose</span><span>Nginx</span><span>Git/GitHub</span><span>SSH</span><span>Testes funcionais</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="projeto-card">
-        <h3>Suíte de Testes Automatizados (QA)</h3>
-        <p>Automação de testes com Python, Selenium e Pytest para validar as funcionalidades de um site de e-commerce, cobrindo cenários de login, carrinho e mais.</p>
-        <a href="https://github.com/Mylena-SantosR/projeto_4_automacao_testes_ecommerce" target="_blank">Ver no GitHub</a>
-    </div>
-</div>
+        <section id="projetos" class="section projects-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">NA PRÁTICA</p>
+                    <h2>Projetos em destaque</h2>
+                    <p class="section-intro">Projetos de estudo e desenvolvimento que demonstram diferentes habilidades técnicas.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-number" aria-hidden="true">01</div>
+                        <h3>Análise de Doenças Cardíacas</h3>
+                        <p>Análise exploratória de dados com Python, Pandas e Matplotlib, incluindo organização e visualização de informações de um conjunto de dados.</p>
+                        <div class="tag-list"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+                        <a class="project-link" href="https://github.com/Mylena-SantosR/projeto_1_analise-doenca-cardiaca" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-number" aria-hidden="true">02</div>
+                        <h3>API de Gerenciamento de Tarefas</h3>
+                        <p>Aplicação com API REST em Python e Flask integrada a uma interface web desenvolvida com HTML, CSS e JavaScript.</p>
+                        <div class="tag-list"><span>Flask</span><span>Python</span><span>JavaScript</span></div>
+                        <a class="project-link" href="https://github.com/Mylena-SantosR/projeto_3_api_flask_tarefas" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-number" aria-hidden="true">03</div>
+                        <h3>Automação de Testes — E-commerce</h3>
+                        <p>Suíte de testes automatizados com Python, Selenium e Pytest para validar funcionalidades e fluxos de uma aplicação web.</p>
+                        <div class="tag-list"><span>Python</span><span>Selenium</span><span>Pytest</span></div>
+                        <a class="project-link" href="https://github.com/Mylena-SantosR/projeto_4_automacao_testes_ecommerce" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section contact-section">
+            <div class="container">
+                <div class="contact-panel">
+                    <p class="eyebrow">VAMOS CONVERSAR?</p>
+                    <h2>Aberta a novas oportunidades</h2>
+                    <p>Tenho interesse em oportunidades em Administração, Planejamento, Processos, Automação, Análise de Dados e Tecnologia da Informação, no Distrito Federal, em Goiás ou de forma remota.</p>
+                    <div class="contact-actions">
+                        <a class="button button-primary" href="mailto:mylenadossantos2248@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio">Enviar e-mail</a>
+                        <a class="button button-light" href="https://www.linkedin.com/in/mylena-dos-santos-rocha" target="_blank" rel="noopener noreferrer">Ver LinkedIn</a>
+                        <a class="button button-light" href="mailto:mylenadossantos2248@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20curr%C3%ADculo">Solicitar currículo</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 - Mylena dos Santos Rocha</p>
+        <div class="container footer-content">
+            <span>© <span id="ano-atual">2026</span> Mylena dos Santos Rocha</span>
+            <span>Planejamento · Dados · Tecnologia</span>
+        </div>
     </footer>
 
+    <button id="backToTopBtn" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
     <script src="script.js"></script>
-
 </body>
 </html>
